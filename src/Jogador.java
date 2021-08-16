@@ -8,10 +8,9 @@ public class Jogador {
     private Equipe equipe;
     private List<PosicionamentoTaticoEnum> posicoes;
 
-    public Jogador(String nome, LocalDate dataDeNascimento, Equipe equipe, List<PosicionamentoTaticoEnum> posicoes) {
+    public Jogador(String nome, LocalDate dataDeNascimento, List<PosicionamentoTaticoEnum> posicoes) {
         this.nome = nome;
         this.dataDeNascimento = dataDeNascimento;
-        this.equipe = equipe;
         this.posicoes = posicoes;
     }
 
@@ -23,8 +22,8 @@ public class Jogador {
         this.nome = nome;
     }
 
-    public LocalDate getDataDeNascimento() {
-        return dataDeNascimento;
+    public int getIdade() {
+        return (LocalDate.now().getYear() - dataDeNascimento.getYear());
     }
 
     public void setDataDeNascimento(LocalDate dataDeNascimento) {

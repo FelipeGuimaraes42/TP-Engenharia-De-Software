@@ -6,6 +6,11 @@ public class Equipe {
     private String colocacao;
     private String nomeTecnico;
 
+    public Equipe(String nome, String nomeTecnico) {
+        this.nome = nome;
+        this.nomeTecnico = nomeTecnico;
+    }
+
     public String getNome() {
         return nome;
     }

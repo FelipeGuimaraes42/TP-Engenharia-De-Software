@@ -8,6 +8,13 @@ public class Jogador {
     private Equipe equipe;
     private List<PosicionamentoTaticoEnum> posicoes;
 
+    public Jogador(String nome, LocalDate dataDeNascimento, Equipe equipe, List<PosicionamentoTaticoEnum> posicoes) {
+        this.nome = nome;
+        this.dataDeNascimento = dataDeNascimento;
+        this.equipe = equipe;
+        this.posicoes = posicoes;
+    }
+
     public String getNome() {
         return nome;
     }

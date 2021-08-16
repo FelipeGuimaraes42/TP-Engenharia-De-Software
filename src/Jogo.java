@@ -4,8 +4,17 @@ public class Jogo {
 
     private Equipe equipe1;
     private Equipe equipe2;
+    private int golsEquipe1;
+    private int golsEquipe2;
     private Estadio local;
     private LocalDate dataHora;
+
+    public Jogo(Equipe equipe1, Equipe equipe2, int golsEquipe1, int golsEquipe2) {
+        this.equipe1 = equipe1;
+        this.equipe2 = equipe2;
+        this.golsEquipe1 = golsEquipe1;
+        this.golsEquipe2 = golsEquipe2;
+    }
 
     public Equipe getEquipe1() {
         return equipe1;
@@ -21,6 +30,22 @@ public class Jogo {
 
     public void setEquipe2(Equipe equipe2) {
         this.equipe2 = equipe2;
+    }
+
+    public int getGolsEquipe1() {
+        return golsEquipe1;
+    }
+
+    public void setGolsEquipe1(int golsEquipe1) {
+        this.golsEquipe1 = golsEquipe1;
+    }
+
+    public int getGolsEquipe2() {
+        return golsEquipe2;
+    }
+
+    public void setGolsEquipe2(int golsEquipe2) {
+        this.golsEquipe2 = golsEquipe2;
     }
 
     public Estadio getLocal() {
@@ -39,17 +64,16 @@ public class Jogo {
         this.dataHora = dataHora;
     }
 
-    public Equipe getVencedor(Equipe equipe1, Equipe equipe2, int gols1, int gols2){
-        if(gols1 > gols2){
+    public Equipe getVencedor(){
+        if(this.golsEquipe1 > this.golsEquipe2){
             return equipe1;
         }
-        else if (gols1 == gols2) {
-            System.out.println("Empate!");
-            return equipe1;
-        }
-        else {
+
+        if(this.golsEquipe1 < this.golsEquipe2){
             return equipe2;
         }
+
+        return null;
     }
 
 }

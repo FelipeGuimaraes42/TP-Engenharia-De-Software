@@ -39,6 +39,6 @@ public class TabelaDeChaveamento {
     }
 
     public void consultarJogo(Jogo jogo) {
-        // Direciona para a classe do jogo escolhido
+        // Direciona para o objeto do jogo escolhido
     }
 }

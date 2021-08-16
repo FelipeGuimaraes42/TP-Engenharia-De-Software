@@ -93,6 +93,12 @@ public class Home {
         estadios.add(new Estadio("Al Bayt", "Al Khor", 60000,
                 "Construído. Em janeiro de 2020, o estádio recebeu certificados de sustentabilidade\n" +
                         "\t\t  de design verde, gestão de construção e eficiência energética"));
+        estadios.add(new Estadio("Ras Abu Aboud", "Doha", 40000,
+                "Em construção. Ele será construído com um design modular, usando contêineres de \n" +
+                        "\t\t  transporte reciclados e deve ser desmontado após a conclusão do evento."));
+        estadios.add(new Estadio("Al Thumama", "Doha", 40000,
+                "Em construção. 50 mil metros quadrados de um parque público cercará o estádio.\n" +
+                        "\t\t  Está localizado perto do Aeroporto Internacional de Hamad."));
 
         separarTelas();
         System.out.println("Estádios");

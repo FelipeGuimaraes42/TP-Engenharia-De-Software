@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Home {
@@ -11,7 +12,8 @@ public class Home {
     //Cabeçalho do sistema
     public void header(){
         separarTelas();
-        System.out.println("Seja bem-vindo ao seu guia da Copa do Mundo do Catar!");
+        System.out.println("\t\t\t\t\t\t\tبطولة كأس العالم لكرة القدم 2022\n");
+        System.out.println("Seja bem-vindo ao seu guia da Copa do Mundo FIFA de 2022!\n");
         System.out.println("Neste sistema você conseguirá encontrar todas as informações " +
                 "relevantes sobre a Copa de 2022!");
         menuInicial();
@@ -51,6 +53,19 @@ public class Home {
                 \t◉ Será a última Copa do Mundo a ter o formato de 32 equipes, já que a\s
                 \tcompetição terá uma mudança no formato e número de equipes na edição de 2026,\s
                 \tonde será sediado no Canadá, Estados Unidos e México, passando para 48 equipes.""");
+
+        System.out.println();
+        System.out.println("Digite 1 para voltar ao menu principal");
+        System.out.println("Digite 2 para saber mais sobre o Catar");
+        System.out.println("Digite esc para sair\n");
+        System.out.print("Insira a opção desejada: ");
+
+        opcao = scanner.nextLine();
+        switch (opcao) {
+            case "1" -> menuInicial();
+            case "2" -> consultarSede();
+            default -> terminarExecucao();
+        }
     }
 
     //Printa para o usuário algumas informações interessantes sobre o Catar
@@ -138,8 +153,8 @@ public class Home {
 
         separarTelas();
         for (Equipe equipe : equipes) {
-            System.out.println("Seleção: " + equipe.getNome());
-            System.out.println("Técnico: " + equipe.getNome());
+            System.out.println(equipe.getNome().toUpperCase(Locale.ROOT));
+            System.out.println("\tTécnico: " + equipe.getNomeTecnico());
         }
     }
 

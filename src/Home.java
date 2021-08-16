@@ -4,14 +4,25 @@ import java.util.Scanner;
 
 public class Home {
 
-    public void home(){
-        Scanner scanner = new Scanner(System.in);
-        String opcao;
-
+    public void header(){
+        separarTelas();
         System.out.println("Seja bem-vindo ao seu guia da Copa do Mundo do Catar!");
         System.out.println("Neste sistema você conseguirá encontrar todas as informações " +
                 "relevantes sobre a Copa de 2022!");
         menuInicial();
+    }
+
+    public void menuInicial(){
+        Scanner scanner = new Scanner(System.in);
+        String opcao;
+
+        separarTelas();
+        System.out.println("MENU");
+        System.out.println("Digite 1 para ver as informações gerais da copa");
+        System.out.println("Digite 2 para ver as equipes");
+        System.out.println("Digite 3 para saber mais sobre a sede");
+        System.out.println("Digite 4 para ver os estádios");
+        System.out.println("Digite esc para sair\n");
         System.out.print("Insira a opção desejada: ");
         opcao = scanner.nextLine();
 
@@ -24,19 +35,11 @@ public class Home {
         }
     }
 
-    public void menuInicial(){
-        System.out.println("Digite 1 para ver as informações gerais da copa");
-        System.out.println("Digite 2 para ver as equipes");
-        System.out.println("Digite 3 para saber mais sobre a sede");
-        System.out.println("Digite 4 para ver os estádios");
-        System.out.println("Digite esc para sair");
-    }
-
     public void verInformacoesGeraisDaCopa() {
+        separarTelas();
         System.out.println("Informações Gerais");
         System.out.println("País sede: Catar");
         System.out.println("Quantidade de países: 16");
-        System.out.println("É noises");
     }
 
     public void consultarTabelaDeChaveamento() {
@@ -57,6 +60,7 @@ public class Home {
 
         Sede sede = new Sede("Catar", "Doha", "Ásia", curiosidades);
 
+        separarTelas();
         System.out.println("Sede: " + sede.getNome());
         System.out.println("Capital: " + sede.getCapital());
         System.out.println("Continente: " + sede.getContinente());
@@ -68,6 +72,7 @@ public class Home {
     }
 
     void verEstadios(){
+        separarTelas();
         System.out.println("Estádios");
     }
 
@@ -77,9 +82,17 @@ public class Home {
         equipes.add(new Equipe("Argentina", "Lionel Scaloni"));
         equipes.add(new Equipe("Brasil", "Tite"));
 
+        separarTelas();
         for (Equipe equipe : equipes) {
             System.out.println("Seleção: " + equipe.getNome());
             System.out.println("Técnico: " + equipe.getNome());
         }
+    }
+
+    public void separarTelas(){
+        System.out.println();
+        System.out.println("---------------------------------------------------------------------------------------" +
+                "------");
+        System.out.println();
     }
 }

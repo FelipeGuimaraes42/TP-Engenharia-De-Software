@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class Home {
 
+    //Variáveis globais
     Scanner scanner = new Scanner(System.in);
     String opcao;
 
+    //Cabeçalho do sistema
     public void header(){
         separarTelas();
         System.out.println("Seja bem-vindo ao seu guia da Copa do Mundo do Catar!");
@@ -15,6 +17,7 @@ public class Home {
         menuInicial();
     }
 
+    //Menu inicial com as diversas ramificações das telas
     public void menuInicial(){
         separarTelas();
         System.out.println("MENU");
@@ -35,6 +38,7 @@ public class Home {
         }
     }
 
+    //Mostra informações gerais sobre a Copa de 2022
     public void verInformacoesGeraisDaCopa() {
         separarTelas();
         System.out.println("Informações Gerais");
@@ -42,10 +46,7 @@ public class Home {
         System.out.println("Quantidade de países: 16");
     }
 
-    public void consultarTabelaDeChaveamento() {
-        // Abre a classe da Tabela de Chaveamento
-    }
-
+    //Printa para o usuário algumas informações interessantes sobre o Catar
     public void consultarSede() {
         List<String> curiosidades = new ArrayList<>();
 
@@ -84,6 +85,7 @@ public class Home {
         }
     }
 
+    //Mostra todos os estádios
     void verEstadios(){
         List<Estadio> estadios = new ArrayList<>();
         estadios.add(new Estadio("Lusail", "Lusail",80000,
@@ -114,6 +116,7 @@ public class Home {
             terminarExecucao();
     }
 
+    //Mostra todas as equipes que participarão da Copa do Mundo
     public void verEquipes() {
         List<Equipe> equipes = new ArrayList<>();
 
@@ -127,6 +130,12 @@ public class Home {
         }
     }
 
+    //Mostra o chaveamento das equipes
+    public void consultarTabelaDeChaveamento() {
+        // Abre a classe da Tabela de Chaveamento
+    }
+
+    //Método útil que serve para separar as diversas telas do sistema
     public void separarTelas(){
         System.out.println();
         System.out.println(Cores.ANSI_BLUE + "-------------------------------------------------------------------" +
@@ -134,6 +143,7 @@ public class Home {
         System.out.println();
     }
 
+    //Printa uma mensagem de despedida
     public void terminarExecucao(){
         separarTelas();
         System.out.println("Obrigado pela visita! Volte sempre!");

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Home {
@@ -43,6 +45,14 @@ public class Home {
     }
 
     public void verEquipes() {
-        // Abre a classe de verEquipes
+        List<Equipe> equipes = new ArrayList<>();
+
+        equipes.add(new Equipe("Brasil", "Tite"));
+        equipes.add(new Equipe("Argentina", "Lionel Scaloni"));
+
+        for (Equipe equipe : equipes) {
+            System.out.println("Seleção: " + equipe.getNome());
+            System.out.println("Técnico: " + equipe.getNome());
+        }
     }
 }

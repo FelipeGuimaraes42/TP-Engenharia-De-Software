@@ -91,8 +91,8 @@ public class Home {
 
     public void separarTelas(){
         System.out.println();
-        System.out.println("---------------------------------------------------------------------------------------" +
-                "------");
+        System.out.println(Cores.ANSI_BLUE + "-------------------------------------------------------------------" +
+                "--------------------------" + Cores.ANSI_BLUE);
         System.out.println();
     }
 }

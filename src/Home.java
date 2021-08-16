@@ -156,6 +156,17 @@ public class Home {
             System.out.println(equipe.getNome().toUpperCase(Locale.ROOT));
             System.out.println("\tTécnico: " + equipe.getNomeTecnico());
         }
+
+        System.out.println();
+        System.out.println("Digite 1 para voltar ao menu principal");
+        System.out.println("Digite Esc para sair\n");
+        System.out.println("Insira a opção desejada: ");
+        opcao = scanner.nextLine();
+
+        if (opcao.equals("1"))
+            menuInicial();
+        else
+            terminarExecucao();
     }
 
     //Mostra o chaveamento das equipes

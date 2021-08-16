@@ -16,6 +16,8 @@ public class Jogo {
         this.golsEquipe2 = golsEquipe2;
     }
 
+    public Jogo(){}
+
     public Equipe getEquipe1() {
         return equipe1;
     }

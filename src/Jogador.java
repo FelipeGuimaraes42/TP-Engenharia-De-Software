@@ -14,6 +14,8 @@ public class Jogador {
         this.posicoes = posicoes;
     }
 
+    public Jogador(){}
+
     public String getNome() {
         return nome;
     }

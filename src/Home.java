@@ -31,7 +31,7 @@ public class Home {
             case "2" -> verEquipes();
             case "3" -> consultarSede();
             case "4" -> verEstadios();
-            default -> System.out.println("Obrigado pela visita! Volte sempre!");
+            default -> terminarExecucao();
         }
     }
 
@@ -48,6 +48,8 @@ public class Home {
 
     public void consultarSede() {
         List<String> curiosidades = new ArrayList<>();
+        String opcao;
+        Scanner scanner = new Scanner(System.in);
 
         curiosidades.add("O Catar é considerado o país mais rico do mundo;");
         curiosidades.add("O Catar fica entre o mar e o deserto;");
@@ -68,6 +70,19 @@ public class Home {
         System.out.println("Curiosidades:");
         for(int i =0; i < sede.getCuriosidades().size(); i++){
             System.out.println("\t" + (i+1) + ". " + sede.getCuriosidades().get(i));
+        }
+
+        System.out.println();
+        System.out.println("Digite 1 para ver os estádios");
+        System.out.println("Digite 2 para voltar para o menu principal");
+        System.out.println("Digite esc para sair\n");
+        System.out.print("Insira a opção desejada: ");
+
+        opcao = scanner.nextLine();
+        switch (opcao) {
+            case "1" -> verEstadios();
+            case "2" -> menuInicial();
+            default -> terminarExecucao();
         }
     }
 
@@ -94,5 +109,11 @@ public class Home {
         System.out.println(Cores.ANSI_BLUE + "-------------------------------------------------------------------" +
                 "--------------------------" + Cores.ANSI_BLUE);
         System.out.println();
+    }
+
+    public void terminarExecucao(){
+        separarTelas();
+        System.out.println("Obrigado pela visita! Volte sempre!");
+        separarTelas();
     }
 }

@@ -42,8 +42,15 @@ public class Home {
     public void verInformacoesGeraisDaCopa() {
         separarTelas();
         System.out.println("Informações Gerais");
-        System.out.println("País sede: Catar");
-        System.out.println("Quantidade de países: 16");
+        System.out.println("\t◉ A Copa do Mundo de 2022 será sediada no Catar");
+        System.out.println("\t◉ Será a 22a Copa do Mundo");
+        System.out.println("\t◉ O campeonato será disputado entre 21 de novembro e 18 de dezembro, \n" +
+                "\tprimeira vez em que é disputado no final do ano");
+        System.out.println("\t◉ Será a primeira Copa do Mundo realizada no Oriente Médio");
+        System.out.println("""
+                \t◉ Será a última Copa do Mundo a ter o formato de 32 equipes, já que a\s
+                \tcompetição terá uma mudança no formato e número de equipes na edição de 2026,\s
+                \tonde será sediado no Canadá, Estados Unidos e México, passando para 48 equipes.""");
     }
 
     //Printa para o usuário algumas informações interessantes sobre o Catar

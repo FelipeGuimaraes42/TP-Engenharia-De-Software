@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Home {
 
+    Scanner scanner = new Scanner(System.in);
+    String opcao;
+
     public void header(){
         separarTelas();
         System.out.println("Seja bem-vindo ao seu guia da Copa do Mundo do Catar!");
@@ -13,23 +16,20 @@ public class Home {
     }
 
     public void menuInicial(){
-        Scanner scanner = new Scanner(System.in);
-        String opcao;
-
         separarTelas();
         System.out.println("MENU");
         System.out.println("Digite 1 para ver as informações gerais da copa");
-        System.out.println("Digite 2 para ver as equipes");
-        System.out.println("Digite 3 para saber mais sobre a sede");
+        System.out.println("Digite 2 para saber mais sobre a sede");
+        System.out.println("Digite 3 para ver as equipes");
         System.out.println("Digite 4 para ver os estádios");
         System.out.println("Digite esc para sair\n");
         System.out.print("Insira a opção desejada: ");
-        opcao = scanner.nextLine();
 
+        opcao = scanner.nextLine();
         switch (opcao) {
             case "1" -> verInformacoesGeraisDaCopa();
-            case "2" -> verEquipes();
-            case "3" -> consultarSede();
+            case "2" -> consultarSede();
+            case "3" -> verEquipes();
             case "4" -> verEstadios();
             default -> terminarExecucao();
         }
@@ -48,8 +48,6 @@ public class Home {
 
     public void consultarSede() {
         List<String> curiosidades = new ArrayList<>();
-        String opcao;
-        Scanner scanner = new Scanner(System.in);
 
         curiosidades.add("O Catar é considerado o país mais rico do mundo;");
         curiosidades.add("O Catar fica entre o mar e o deserto;");
@@ -87,8 +85,33 @@ public class Home {
     }
 
     void verEstadios(){
+        List<Estadio> estadios = new ArrayList<>();
+        estadios.add(new Estadio("Lusail", "Lusail",80000,
+                "Em construção. Será sede da abertura e encerramento da Copa do Mundo."));
+        estadios.add(new Estadio("Al Bayt", "Al Khor", 60000,
+                "Construído. Em janeiro de 2020, o estádio recebeu certificados de sustentabilidade\n" +
+                        "\t\t  de design verde, gestão de construção e eficiência energética"));
+
         separarTelas();
         System.out.println("Estádios");
+        for(Estadio estadio : estadios){
+            System.out.println("Nome: " + estadio.getNome());
+            System.out.println("Cidade: " + estadio.getEndereco());
+            System.out.println("Capacidade: " + estadio.getCapacidade());
+            System.out.println("História: " + estadio.getHistoria());
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println("Digite 1 para voltar ao menu principal");
+        System.out.println("Digite esc para sair\n");
+        System.out.print("Insira a opção desejada: ");
+
+        opcao = scanner.nextLine();
+        if(opcao.equals("1"))
+            menuInicial();
+        else
+            terminarExecucao();
     }
 
     public void verEquipes() {

@@ -10,6 +10,8 @@ public class Estadio extends PontoTuristico {
         this.historia = historia;
     }
 
+    public Estadio() {}
+
     public int getCapacidade() {
         return capacidade;
     }

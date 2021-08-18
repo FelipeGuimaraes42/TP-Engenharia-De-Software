@@ -25,4 +25,21 @@ public class JogadorTest {
         assertEquals(jogador.getPosicionamento().get(1), PosicionamentoTaticoEnum.CENTRO_AVANTE);
     }
 
+    @Test
+    public void itShouldTestGettersAndSetters(){
+        Equipe brasil = new Equipe("ES", "Amanda");
+
+        Jogador jogador = new Jogador();
+        jogador.setNome("Felipo");
+        jogador.setDataDeNascimento(LocalDate.of(1999,10,5));
+        jogador.setPosicionamento(List.of(PosicionamentoTaticoEnum.PONTA, PosicionamentoTaticoEnum.CENTRO_AVANTE));
+        jogador.setEquipe(brasil.getNome());
+
+        assertEquals(jogador.getNome(), "Felipo");
+        assertEquals(jogador.getIdade(), 22);
+        assertEquals(jogador.getEquipe(), "ES");
+        assertEquals(jogador.getPosicionamento().get(0), PosicionamentoTaticoEnum.PONTA);
+        assertEquals(jogador.getPosicionamento().get(1), PosicionamentoTaticoEnum.CENTRO_AVANTE);
+    }
+
 }

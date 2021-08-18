@@ -37,8 +37,4 @@ public class TabelaDeChaveamento {
     public void setJogoFinal(List<Jogo> jogoFinal) {
         this.jogoFinal = jogoFinal;
     }
-
-    public void consultarJogo(Jogo jogo) {
-        // Direciona para o objeto do jogo escolhido
-    }
 }

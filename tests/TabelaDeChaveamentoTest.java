@@ -26,4 +26,22 @@ public class TabelaDeChaveamentoTest {
         assertEquals(tabela.getSemifinal().get(0).getVencedor().getNome(), alemanha.getNome());
         assertEquals(tabela.getSemifinal().get(1).getVencedor().getNome(), brasil.getNome());
     }
+
+    @Test
+    public void itShouldValidateGettersAndSetters(){
+        TabelaDeChaveamento tabelaDeChaveamento = new TabelaDeChaveamento();
+        Equipe alemanha = new Equipe("Alemanha", "Hans-Dieter Flick");
+        Equipe brasil = new Equipe("Brasil", "Tite");
+        Jogo jogo = new Jogo(alemanha, brasil, 7, 1);
+
+        tabelaDeChaveamento.setOitavas(List.of(jogo));
+        tabelaDeChaveamento.setQuartas(List.of(jogo));
+        tabelaDeChaveamento.setSemifinal(List.of(jogo));
+        tabelaDeChaveamento.setJogoFinal(List.of(jogo));
+
+        assertEquals(tabelaDeChaveamento.getOitavas().get(0).getVencedor().getNome(), "Alemanha");
+        assertEquals(tabelaDeChaveamento.getQuartas().get(0).getVencedor().getNome(), "Alemanha");
+        assertEquals(tabelaDeChaveamento.getSemifinal().get(0).getVencedor().getNome(), "Alemanha");
+        assertEquals(tabelaDeChaveamento.getJogoFinal().get(0).getVencedor().getNome(), "Alemanha");
+    }
 }

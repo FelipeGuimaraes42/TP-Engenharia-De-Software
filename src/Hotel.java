@@ -3,7 +3,7 @@ public class Hotel extends PontoTuristico {
     private float estadia;
 
     public int getAvaliacao() {
-        return avaliacao;
+        return this.avaliacao;
     }
 
     public void setAvaliacao(int classificacao) {
@@ -14,7 +14,7 @@ public class Hotel extends PontoTuristico {
         return estadia;
     }
 
-    public void setEstadia(int classificacao) {
-        this.avaliacao = classificacao;
+    public void setEstadia(int estadia) {
+        this.estadia = estadia;
     }
 }

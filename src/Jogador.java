@@ -5,7 +5,7 @@ public class Jogador {
 
     private String nome;
     private LocalDate dataDeNascimento;
-    private Equipe equipe;
+    private String nomeEquipe;
     private List<PosicionamentoTaticoEnum> posicoes;
 
     public Jogador(String nome, LocalDate dataDeNascimento, List<PosicionamentoTaticoEnum> posicoes) {
@@ -32,12 +32,12 @@ public class Jogador {
         this.dataDeNascimento = dataDeNascimento;
     }
 
-    public Equipe getEquipe() {
-        return equipe;
+    public String getEquipe() {
+        return nomeEquipe;
     }
 
-    public void setEquipe(Equipe equipe) {
-        this.equipe = equipe;
+    public void setEquipe(String nomeEquipe) {
+        this.nomeEquipe = nomeEquipe;
     }
 
     public List<PosicionamentoTaticoEnum> getPosicionamento() {

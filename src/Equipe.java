@@ -11,6 +11,8 @@ public class Equipe {
         this.nomeTecnico = nomeTecnico;
     }
 
+    public Equipe() {}
+
     public String getNome() {
         return nome;
     }

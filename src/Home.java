@@ -169,12 +169,7 @@ public class Home {
             terminarExecucao();
     }
 
-    //Mostra o chaveamento das equipes
-    public void consultarTabelaDeChaveamento() {
-        // Abre a classe da Tabela de Chaveamento
-    }
-
-    //Método útil que serve para separar as diversas telas do sistema
+    //Método útil que serve para separar as diversas telas do sistema e dar ao terminal
     public void separarTelas(){
         System.out.println();
         System.out.println(Cores.ANSI_BLUE + "-------------------------------------------------------------------" +

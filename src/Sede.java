@@ -13,6 +13,8 @@ public class Sede {
         this.curiosidades = curiosidades;
     }
 
+    public Sede(){}
+
     public String getNome() {
         return nome;
     }
